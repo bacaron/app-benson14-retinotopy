@@ -12,6 +12,9 @@ import nibabel.freesurfer.io        as     fsio
 import nibabel.freesurfer.mghformat as     fsmgh
 import os, sys, six, pimms
 
+pwd = os.getcwd()
+os.chdir(os.path.join(pwd,'neuropythy','commands'))
+
 from   ..freesurfer                 import (subject, add_subject_path)
 from   ..vision                     import (predict_retinotopy, retinotopy_model, clean_retinotopy)
 from   ..                           import io as nyio
@@ -195,4 +198,3 @@ def main(*args):
                     note('    - Not overwriting existing file: %s' % flnm)
         note('   Subject %s finished!' % sub.name)
     return 0
-
