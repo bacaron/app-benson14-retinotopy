@@ -1,6 +1,7 @@
 license.txt
 config.json
 testdata
-barn
-copy
+fs_copy
 prf
+varea
+varea_surf
